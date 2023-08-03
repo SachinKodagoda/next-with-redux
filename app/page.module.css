@@ -1,8 +1,23 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  justify-content: center;
   min-height: 100vh;
+  gap: 50px;
+}
+
+.counter {
+  font-size: 60px;
+}
+
+.btnCtr {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.btnCtr > button {
+  padding: 1rem 2rem;
+  font-size: 20px;
 }

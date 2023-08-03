@@ -15,12 +15,14 @@ export default function Home() {
   const dispatch = useDispatch();
   return (
     <main className={styles.main}>
-      {count}
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>decrement</button>
-      <button onClick={() => dispatch(incrementByAmount(2))}>
-        incrementByAmount of 2
-      </button>
+      <div className={styles.counter}>{count}</div>
+      <div className={styles.btnCtr}>
+        <button onClick={() => dispatch(increment())}>Increment</button>
+        <button onClick={() => dispatch(decrement())}>decrement</button>
+        <button onClick={() => dispatch(incrementByAmount(2))}>
+          increase by 2
+        </button>
+      </div>
     </main>
   );
 }
