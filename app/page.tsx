@@ -1,15 +1,17 @@
 "use client";
+
 import {
+  counterValue,
   decrement,
   increment,
   incrementByAmount,
-} from "@/lib/redux/slices/counterSlice";
-import type { RootState } from "@/lib/redux/store";
+} from "@/lib/redux/store";
+
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const count = useSelector((state: RootState) => state.counter.value);
+  const count = useSelector(counterValue);
   const dispatch = useDispatch();
   return (
     <main className={styles.main}>

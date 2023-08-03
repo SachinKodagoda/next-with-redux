@@ -5,9 +5,10 @@ import counterReducer from './slices/counterSlice';
 
 export const store = configureStore({
     reducer: {
-        counter: counterReducer
+        counter: counterReducer.reducer
     }
 })
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+type RootState = ReturnType<typeof store.getState>;
+export const counterValue = (state: RootState) => state.counter.value;
+export const { increment, decrement, incrementByAmount } = counterReducer.actions;
