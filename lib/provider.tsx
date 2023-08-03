@@ -6,6 +6,6 @@ import { store } from "./redux/store";
 type TProps = {
   children: React.ReactNode;
 };
-export default function Providers({ children }: TProps) {
+export default function ReduxProvider({ children }: TProps) {
   return <Provider store={store}>{children}</Provider>;
 }
