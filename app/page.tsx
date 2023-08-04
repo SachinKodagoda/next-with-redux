@@ -7,6 +7,7 @@ import {
   incrementByAmount,
 } from "@/lib/redux/store";
 
+import { asyncCalls } from "@/lib/redux/thunks/postThunk";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./page.module.css";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <button onClick={() => dispatch(incrementByAmount(2))}>
           increase by 2
         </button>
+        <button onClick={() => dispatch(asyncCalls(1))}>async</button>
       </div>
     </main>
   );
